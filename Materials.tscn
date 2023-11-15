@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c57duuo5p7mc0"]
+[gd_scene load_steps=52 format=3 uid="uid://c57duuo5p7mc0"]
 
 [ext_resource type="Script" path="res://materials.gd" id="1_81rf8"]
 [ext_resource type="Environment" uid="uid://du5gp6ah0abgv" path="res://default_env.tres" id="2_iiict"]
@@ -7,6 +7,153 @@
 [ext_resource type="Material" uid="uid://b0qkg55h84i3f" path="res://materials/white.tres" id="6_idi41"]
 [ext_resource type="Material" uid="uid://bbfkhkmct7wu3" path="res://materials/blue.tres" id="7_rrw2d"]
 [ext_resource type="Material" uid="uid://d3u3snuqdn404" path="res://materials/gray.tres" id="8_4sk63"]
+[ext_resource type="Texture2D" uid="uid://bk3xkinj51cvj" path="res://materials/texture_wood.png" id="8_x67tg"]
+[ext_resource type="Texture2D" uid="uid://b7eyon0be6xj2" path="res://materials/texture_cheese_albedo.png" id="9_qeblq"]
+[ext_resource type="Texture2D" uid="uid://b3u5f5p62a4x3" path="res://materials/texture_cheese_ao.png" id="10_817pn"]
+[ext_resource type="Texture2D" uid="uid://c3n8ai7k0ujkl" path="res://materials/texture_cheese_depth.png" id="11_jgm77"]
+[ext_resource type="Texture2D" uid="uid://dkosy30jvbh8p" path="res://materials/texture_cheese_normal.png" id="12_ruqc8"]
+[ext_resource type="Texture2D" uid="uid://biweigokrrshd" path="res://materials/texture_rock_albedo.png" id="13_ekvkj"]
+[ext_resource type="Texture2D" uid="uid://c6vk1m51ceppc" path="res://materials/texture_rock_ao.png" id="14_oy4s0"]
+[ext_resource type="Texture2D" uid="uid://bt0wrbhpadlno" path="res://materials/texture_rock_depth.png" id="15_xo2fd"]
+[ext_resource type="Texture2D" uid="uid://bcna7spvhs18v" path="res://materials/texture_rock_metal.png" id="16_ulaex"]
+[ext_resource type="Texture2D" uid="uid://dnb1l2u7igkxg" path="res://materials/texture_rock_normal.png" id="17_vqype"]
+[ext_resource type="Texture2D" uid="uid://5numpc5115rf" path="res://materials/texture_bricks.jpg" id="18_csdky"]
+[ext_resource type="Texture2D" uid="uid://dt8nf3vccfahi" path="res://materials/texture_bricks_depth.jpg" id="19_hymjv"]
+[ext_resource type="Texture2D" uid="uid://5lxtn3y1onvu" path="res://materials/texture_bricks_metal.jpg" id="20_qyipe"]
+[ext_resource type="Texture2D" uid="uid://ciko5tni6mq31" path="res://materials/texture_bricks_normal.jpg" id="21_s1bqy"]
+[ext_resource type="Texture2D" uid="uid://sccm0kj5w2s6" path="res://materials/wool_albedo.png" id="22_kx6it"]
+[ext_resource type="Texture2D" uid="uid://nnqqteau6u1f" path="res://materials/wool_depth.png" id="23_58ehv"]
+[ext_resource type="Texture2D" uid="uid://bm7chcl232dqu" path="res://materials/wool_normal.png" id="24_l8odn"]
+[ext_resource type="Texture2D" uid="uid://bbkx3ep8nnqna" path="res://materials/aluminium_albedo.png" id="25_tpy06"]
+[ext_resource type="Texture2D" uid="uid://b37pwvfsy2upg" path="res://materials/aluminium_flow.png" id="26_scpyc"]
+[ext_resource type="Texture2D" uid="uid://bb04lwq6spt4i" path="res://materials/aluminium_normal.png" id="27_uccex"]
+[ext_resource type="Texture2D" uid="uid://bq3wjqgh332v4" path="res://materials/marble_albedo.png" id="28_1i7ha"]
+[ext_resource type="Texture2D" uid="uid://3xqr8mbg4vpq" path="res://materials/sand_albedo.jpg" id="29_8y4w5"]
+[ext_resource type="Texture2D" uid="uid://dsswq8otqa42x" path="res://materials/sand_metal.jpg" id="30_gxx3f"]
+[ext_resource type="Texture2D" uid="uid://dgeu0upvk44g7" path="res://materials/sand_normal.jpg" id="31_55dsa"]
+[ext_resource type="Texture2D" uid="uid://tcqbpfj6c42m" path="res://materials/sand_rough.jpg" id="32_u1fnt"]
+[ext_resource type="Texture2D" uid="uid://0injgphaqblm" path="res://materials/rock_albedo.jpg" id="33_7a0ko"]
+[ext_resource type="Texture2D" uid="uid://b12eon5mgxftq" path="res://materials/rock_ao.jpg" id="34_33bf3"]
+[ext_resource type="Texture2D" uid="uid://c8cqni1p3w0na" path="res://materials/rock_depth.jpg" id="35_48lec"]
+[ext_resource type="Texture2D" uid="uid://ggw5n0hiasp3" path="res://materials/rock_metal.jpg" id="36_guoom"]
+[ext_resource type="Texture2D" uid="uid://cxcldp70lrq80" path="res://materials/rock_rough.jpg" id="37_fhhjd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjsuf"]
+metallic = 0.4
+roughness = 0.35
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bq6y"]
+metallic = 1.0
+roughness = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uybqh"]
+albedo_color = Color(0.807843, 0.576471, 0.360784, 1)
+albedo_texture = ExtResource("8_x67tg")
+metallic = 0.48
+roughness = 0.28
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0b1f"]
+albedo_texture = ExtResource("9_qeblq")
+roughness = 0.64
+normal_enabled = true
+normal_texture = ExtResource("12_ruqc8")
+ao_enabled = true
+ao_texture = ExtResource("10_817pn")
+heightmap_enabled = true
+heightmap_texture = ExtResource("11_jgm77")
+subsurf_scatter_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4iai3"]
+albedo_texture = ExtResource("13_ekvkj")
+metallic = 0.86
+metallic_texture = ExtResource("16_ulaex")
+roughness = 0.47
+normal_enabled = true
+normal_texture = ExtResource("17_vqype")
+ao_enabled = true
+ao_texture = ExtResource("14_oy4s0")
+heightmap_enabled = true
+heightmap_texture = ExtResource("15_xo2fd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75ff1"]
+albedo_texture = ExtResource("18_csdky")
+metallic = 1.0
+metallic_texture = ExtResource("20_qyipe")
+roughness = 0.56
+normal_enabled = true
+normal_texture = ExtResource("21_s1bqy")
+heightmap_enabled = true
+heightmap_texture = ExtResource("19_hymjv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bc00"]
+albedo_texture = ExtResource("22_kx6it")
+metallic = 0.1
+roughness = 0.77
+normal_enabled = true
+normal_texture = ExtResource("24_l8odn")
+heightmap_enabled = true
+heightmap_texture = ExtResource("23_58ehv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dckt"]
+albedo_texture = ExtResource("25_tpy06")
+metallic = 0.59
+roughness = 0.4
+normal_enabled = true
+normal_texture = ExtResource("27_uccex")
+anisotropy_enabled = true
+anisotropy_flowmap = ExtResource("26_scpyc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11rrf"]
+diffuse_mode = 2
+albedo_texture = ExtResource("28_1i7ha")
+metallic = 0.1
+roughness = 0.1
+rim_enabled = true
+subsurf_scatter_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3m738"]
+albedo_texture = ExtResource("29_8y4w5")
+metallic = 1.0
+metallic_texture = ExtResource("30_gxx3f")
+roughness_texture = ExtResource("32_u1fnt")
+normal_enabled = true
+normal_texture = ExtResource("31_55dsa")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3n5tc"]
+albedo_texture = ExtResource("33_7a0ko")
+metallic = 0.12
+roughness_texture = ExtResource("37_fhhjd")
+normal_enabled = true
+normal_texture = ExtResource("36_guoom")
+ao_enabled = true
+ao_texture = ExtResource("34_33bf3")
+heightmap_enabled = true
+heightmap_texture = ExtResource("35_48lec")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bn7e3"]
+depth_draw_mode = 2
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("33_7a0ko")
+metallic = 1.0
+roughness = 0.62
+normal_enabled = true
+normal_texture = ExtResource("36_guoom")
+ao_enabled = true
+ao_texture = ExtResource("34_33bf3")
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3wmg8"]
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0.027451, 0, 0, 1)
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg5i5"]
+next_pass = SubResource("StandardMaterial3D_3wmg8")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.905882, 0.356863, 0.0980392, 1)
+roughness = 0.04
 
 [node name="Materials" type="Node3D"]
 script = ExtResource("1_81rf8")
@@ -22,6 +169,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/White Plastic"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_sjsuf")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -32,6 +180,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Mirror"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_4bq6y")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -42,6 +191,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Dark Wood"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_uybqh")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -52,6 +202,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Cheese"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_e0b1f")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -62,6 +213,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Stones"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_4iai3")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -72,6 +224,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Brick"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_75ff1")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -81,6 +234,7 @@ surface_material_override/3 = ExtResource("8_4sk63")
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Wool"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_1bc00")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -91,6 +245,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Aluminium"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_3dckt")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -101,6 +256,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Marble"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_11rrf")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -111,6 +267,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Wet Sand"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_3m738")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -121,6 +278,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Rock"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_3n5tc")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -131,6 +289,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Ice"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_bn7e3")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
@@ -141,6 +300,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 0)
 [node name="GodotBall" type="MeshInstance3D" parent="Testers/Toon"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.5, -4)
 mesh = ExtResource("4_4sqyn")
+surface_material_override/0 = SubResource("StandardMaterial3D_kg5i5")
 surface_material_override/1 = ExtResource("6_idi41")
 surface_material_override/2 = ExtResource("7_rrw2d")
 surface_material_override/3 = ExtResource("8_4sk63")
